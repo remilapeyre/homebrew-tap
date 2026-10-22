@@ -4,7 +4,7 @@ cask "vikunja-desktop" do
 
   url "https://dl.vikunja.io/desktop/v#{version}/Vikunja%20Desktop-v#{version}.dmg"
   name "vikunja-desktop"
-  desc "Task manager you actually own"
+  desc "Self-hosted task manager"
   homepage "https://vikunja.io/"
 
   livecheck do
@@ -16,6 +16,5 @@ cask "vikunja-desktop" do
 
   app "Vikunja Desktop.app"
 
-  # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
-  zap trash: ""
+  zap trash: "~/Library/Preferences/io.vikunja.desktop.plist"
 end
